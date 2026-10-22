@@ -1,18 +1,26 @@
 
+
 /* =========================
-   1. COLOR PALETTE
+   1. WELDING COLOR PALETTE
 ========================= */
 
 :root {
     --black: #0A0A0A;
     --dark-gray: #121212;
+    --medium-gray: #252525;
     --silver: #C0C0C0;
-    --yellow: #FFD700;
+    --yellow: #FFC400;
     --neon-red: #FF2E2E;
+    --deep-red: #B30000;
     --orange: #FF6A00;
 
     --heading-font: 'Oswald', sans-serif;
     --body-font: 'Roboto', sans-serif;
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
 }
 
 /* =========================
@@ -25,20 +33,35 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: var(--yellow);
-    color: var(--dark-gray);
+    background-color: var(--black);
+    color: var(--silver);
     font-family: var(--body-font);
     line-height: 1.6;
 }
 
 h1, h2, h3 {
     font-family: var(--heading-font);
-    letter-spacing: 1px;
+    color: var(--yellow);
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: var(--space-2);
 }
 
 a {
     text-decoration: none;
+    transition: 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* =========================
@@ -47,9 +70,10 @@ a {
 
 header {
     background-color: var(--black);
-    color: var(--yellow);
+    color: var(--silver);
     padding: 20px 5%;
     border-bottom: 3px solid var(--neon-red);
+    box-shadow: 0 4px 15px rgba(255, 46, 46, 0.2);
 }
 
 .navbar {
@@ -65,6 +89,15 @@ header {
     font-family: var(--heading-font);
     font-size: 28px;
     text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 196, 0, 0.4);
+}
+
+/* Optional logo image */
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
 }
 
 nav {
@@ -73,15 +106,17 @@ nav {
 }
 
 nav a {
-    color: var(--yellow);
+    color: var(--silver);
     font-size: 16px;
-    transition: 0.3s;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
 
 nav a:hover,
 nav a.active {
-    color: var(--neon-red);
+    color: var(--yellow);
     border-bottom: 2px solid var(--neon-red);
+    text-shadow: 0 0 8px var(--orange);
 }
 
 /* =========================
@@ -89,16 +124,25 @@ nav a.active {
 ========================= */
 
 .hero {
-    background-color: var(--dark-gray);
-    color: var(--yellow);
+    background:
+        radial-gradient(
+            circle at center,
+            #252525 0%,
+            #121212 55%,
+            #0A0A0A 100%
+        );
+
+    color: var(--silver);
     text-align: center;
     padding: 100px 20px;
-    border-bottom: 4px solid var(--silver);
+    border-bottom: 4px solid var(--neon-red);
 }
 
 .hero h1 {
+    color: var(--yellow);
     font-size: 48px;
     margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 196, 0, 0.4);
 }
 
 .hero h2 {
@@ -124,12 +168,15 @@ nav a.active {
     border: 2px solid var(--neon-red);
     padding: 10px 22px;
     border-radius: 4px;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--neon-red);
-    color: var(--yellow);
+    color: var(--black);
+    box-shadow: 0 0 15px var(--neon-red);
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -145,9 +192,11 @@ nav a.active {
 
 section {
     padding: 35px 5%;
+    background-color: var(--black);
 }
 
 section h2 {
+    color: var(--yellow);
     font-size: 30px;
     margin-bottom: 15px;
     border-bottom: 2px solid var(--neon-red);
@@ -160,7 +209,7 @@ section h2 {
 
 .projects {
     background-color: var(--dark-gray);
-    color: var(--yellow);
+    color: var(--silver);
 }
 
 .project-grid {
@@ -171,17 +220,23 @@ section h2 {
 }
 
 .project-card {
-    background-color: var(--yellow);
-    color: var(--dark-gray);
+    background-color: var(--medium-gray);
+    color: var(--silver);
     border: 2px solid var(--silver);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+}
+
+.project-card h3 {
+    color: var(--yellow);
+    margin-bottom: 10px;
 }
 
 .project-card:hover {
     border-color: var(--neon-red);
     transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 46, 46, 0.3);
 }
 
 .project-card img {
@@ -195,7 +250,7 @@ section h2 {
 ========================= */
 
 .skills {
-    background-color: var(--yellow);
+    background-color: var(--black);
     text-align: center;
 }
 
@@ -207,16 +262,22 @@ section h2 {
 }
 
 .skill-card {
-    background-color: var(--silver);
+    background-color: var(--medium-gray);
+    color: var(--silver);
     padding: 20px;
     border-radius: 8px;
-    border: 2px solid var(--dark-gray);
-    transition: 0.3s;
+    border: 2px solid var(--silver);
+    transition: 0.3s ease;
+}
+
+.skill-card h3 {
+    color: var(--yellow);
 }
 
 .skill-card:hover {
     border-color: var(--neon-red);
-    background-color: var(--yellow);
+    background-color: var(--dark-gray);
+    box-shadow: 0 0 12px rgba(255, 106, 0, 0.4);
 }
 
 /* =========================
@@ -236,6 +297,7 @@ section h2 {
     object-fit: cover;
     border: 3px solid var(--neon-red);
     border-radius: 8px;
+    box-shadow: 0 0 12px rgba(255, 46, 46, 0.3);
 }
 
 .about-text {
@@ -243,10 +305,16 @@ section h2 {
     min-width: 250px;
 }
 
+.about-text p {
+    color: var(--silver);
+}
+
 .interests {
-    background-color: var(--silver);
+    background-color: var(--medium-gray);
+    color: var(--silver);
     padding: 30px;
     border-radius: 6px;
+    border-left: 4px solid var(--yellow);
 }
 
 /* =========================
@@ -254,15 +322,21 @@ section h2 {
 ========================= */
 
 .contact {
-    background-color: var(--yellow);
+    background-color: var(--dark-gray);
+    color: var(--silver);
+}
+
+.contact h2 {
+    color: var(--yellow);
 }
 
 .contact a {
-    color: var(--dark-gray);
+    color: var(--yellow);
 }
 
 .contact a:hover {
     color: var(--neon-red);
+    text-shadow: 0 0 8px var(--neon-red);
 }
 
 /* =========================
@@ -271,10 +345,22 @@ section h2 {
 
 footer {
     background-color: var(--black);
-    color: var(--yellow);
+    color: var(--silver);
     text-align: center;
     padding: 25px;
     border-top: 3px solid var(--neon-red);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--yellow);
+}
+
+footer a:hover {
+    color: var(--neon-red);
 }
 
 /* =========================
@@ -282,6 +368,10 @@ footer {
 ========================= */
 
 @media screen and (max-width: 768px) {
+
+    .hero {
+        padding: 70px 20px;
+    }
 
     .hero h1 {
         font-size: 36px;
@@ -343,4 +433,13 @@ footer {
     section {
         padding: 25px 15px;
     }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    header {
+        padding: 15px;
+    }
 }
+
