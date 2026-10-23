@@ -1,64 +1,185 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Welding Way</title>
 
+    <title>The Ways Of Welding</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- HEADER AND NAVIGATION -->
     <header>
-        <h1>Welcome to The Welding Way</h1>
-        <p>Learn the best techniques and tips for welding like a pro.</p>
+        <div class="navbar">
+
+            <a href="index.html" class="logo">
+                <img src="web icon.png" alt="The Ways Of Welding Logo">
+                <span>The Ways Of Welding</span>
+            </a>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Welding Skills</a>
+                <a href="#safety">Safety</a>
+            </nav>
+
+        </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
 
-        <section>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Welcome to The Welding Way</h1>
+
+            <h2>Learn the Art and Skill of Welding</h2>
+
+            <p>
+                Learn the best techniques and tips for welding like a pro.
+                Explore different welding methods, develop your skills,
+                and discover how metalworking brings ideas to life.
+            </p>
+
+            <a href="#skills" class="btn">Explore Welding</a>
+        </section>
+
+        <!-- ABOUT WELDING -->
+        <section class="container" id="about">
+
             <h2>Learn About Welding</h2>
+
             <p>
                 Welding is the process of joining two or more pieces
                 of metal together using heat, pressure, or both.
                 It is an important skill used in construction,
-                manufacturing, and automotive repair.
+                manufacturing, automotive repair, and many other
+                industries.
             </p>
-            <img src="web icon.png" alt="Icon representing welding">
+
+            <p>
+                There are several welding methods, including MIG,
+                TIG, Stick, and Flux-Cored welding. Each method
+                has different techniques, equipment, and uses.
+            </p>
+
         </section>
 
-        <section>
+        <!-- WELDING SKILLS -->
+        <section class="skills" id="skills">
+
             <h2>Welding Skills to Learn</h2>
-            <ul>
-                <li>Master the basics of different welding methods.</li>
-                <li>Understand the importance of safety and protective gear.</li>
-                <li>Practice proper joint preparation and alignment.</li>
-                <li>Learn how to choose the right welding consumables.</li>
-                <li>Develop skills in reading welding symbols and blueprints.</li>
-            </ul>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Welding Methods</h3>
+                    <p>
+                        Learn the basics of MIG, TIG, Stick,
+                        and Flux-Cored welding.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Safety Equipment</h3>
+                    <p>
+                        Understand protective equipment
+                        and safe welding practices.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Joint Preparation</h3>
+                    <p>
+                        Practice proper metal preparation,
+                        alignment, and positioning.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Welding Materials</h3>
+                    <p>
+                        Learn how to select the right
+                        electrodes, wire, and consumables.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Blueprint Reading</h3>
+                    <p>
+                        Develop skills in understanding
+                        welding symbols and blueprints.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
 
-        <article>
+        <!-- WELDING SAFETY -->
+        <section class="container" id="safety">
+
+            <h2>Welding Safety Matters</h2>
+
+            <p>
+                Safety is one of the most important parts of welding.
+                Always wear the proper protective equipment,
+                including a welding helmet, gloves, protective clothing,
+                and appropriate footwear.
+            </p>
+
+            <p>
+                Make sure your workspace has proper ventilation.
+                Keep flammable materials away from welding sparks
+                and always inspect your equipment before starting.
+            </p>
+
+            <a href="safety.html" class="btn">Learn More About Safety</a>
+
+        </section>
+
+        <!-- BECOMING A SKILLED WELDER -->
+        <article class="interests container">
+
             <h2>Becoming a Skilled Welder</h2>
+
             <p>
                 With consistent practice and attention to detail,
                 you can become a skilled welder capable of producing
-                high-quality work.
+                high-quality work. Learning different welding
+                techniques will help you improve your abilities
+                and gain experience.
             </p>
 
             <h3>Keep Learning and Stay Safe</h3>
+
             <p>
                 Remember, welding is both an art and a science.
                 Keep learning, stay safe, and enjoy the process
                 of creating strong and durable joints.
             </p>
+
         </article>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>Happy welding! Welcome to The Welding Way.</p>
+        <p>Happy Welding!</p>
+        <p>The Ways Of Welding | Learn. Practice. Create.</p>
     </footer>
 
 </body>
